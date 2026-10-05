@@ -1,4 +1,5 @@
 def calculate(a, operator, b):
+    """Perform a basic arithmetic calculation."""
     if operator == "+":
         return a + b
     if operator == "-":
@@ -12,19 +13,10 @@ def calculate(a, operator, b):
     raise ValueError("Unsupported operator.")
 
 
-def main():
-    print("Simple Python Calculator")
+# Change these values to test different calculations.
+a = 10
+operator = "*"
+b = 5
 
-    try:
-        a = float(input("First number: "))
-        operator = input("Operator (+, -, *, /): ").strip()
-        b = float(input("Second number: "))
-
-        result = calculate(a, operator, b)
-        print(f"Result: {result}")
-    except ValueError as exc:
-        print(f"Error: {exc}")
-
-
-if __name__ == "__main__":
-    main()
+result = calculate(a, operator, b)
+print(f"{a} {operator} {b} = {result}")
